@@ -1,4 +1,4 @@
-sitemap demo label="Main Menu"
+sitemap demo label="Demo House"
 {
 	Frame {
 		Group item=gFF label="First Floor" icon="firstfloor"
@@ -11,6 +11,8 @@ sitemap demo label="Main Menu"
 			Frame {
 				Text item=Weather_Temp_Max valuecolor=[>25="orange",>15="green",>5="orange",<=5="blue"]
 				Text item=Weather_Temp_Min valuecolor=[>25="orange",>15="green",>5="orange",<=5="blue"]
+				Text item=Weather_Humidity
+				Text item=Weather_Humidex
 				Text item=Weather_LastUpdate visibility=[Weather_LastUpdate>30] valuecolor=[Weather_LastUpdate>120="orange", Weather_LastUpdate>300="red"]
 			}
 			Frame {
@@ -47,6 +49,10 @@ sitemap demo label="Main Menu"
 				Switch item=DemoShutter
 				Slider item=DemoBlinds
 			}
+			Frame label="Map/Location" {
+				Mapview item=DemoLocation height=10
+			}
+			
 		}
 		Text label="Multimedia" icon="video" {
 			Frame label="Radio Control" {
